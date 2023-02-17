@@ -1,58 +1,25 @@
-export const heroesFetching = () => {
-  return {
-      type: 'HEROES_FETCHING'
-  }
-}
+import { createAction } from "@reduxjs/toolkit";
 
-export const heroesFetched = (heroes) => {
-  return {
-      type: 'HEROES_FETCHED',
-      payload: heroes
-  }
-}
+export const fetchHeroes = (request) => (dispatch) => {
+  dispatch(heroesFetching());
+  request("http://localhost:3001/heroes")
+    .then((data) => dispatch(heroesFetched(data)))
+    .catch(() => dispatch(heroesFetchingError()));
+};
 
-export const heroesFetchingError = () => {
-  return {
-      type: 'HEROES_FETCHING_ERROR'
-  }
-}
+export const filterHeroes = (request) => (dispatch) => {
+  dispatch(filtersFetching());
+  request("http://localhost:3001/filters")
+    .then((data) => dispatch(filtersFetched(data)))
+    .catch(() => dispatch(filtersFetchingError()));
+};
 
-export const filtersFetching = () => {
-  return {
-      type: 'FILTERS_FETCHING'
-  }
-}
-
-export const filtersFetched = (filters) => {
-  return {
-      type: 'FILTERS_FETCHED',
-      payload: filters
-  }
-}
-
-export const filtersFetchingError = () => {
-  return {
-      type: 'FILTERS_FETCHING_ERROR'
-  }
-}
-
-export const activeFilterChanged = (filter) => {
-  return {
-      type: 'ACTIVE_FILTER_CHANGED',
-      payload: filter
-  }
-}
-
-export const heroCreated = (hero) => {
-  return {
-      type: 'HERO_CREATED',
-      payload: hero
-  }
-}
-
-export const heroDeleted = (id) => {
-  return {
-      type: 'HERO_DELETED',
-      payload: id
-  }
-}
+export const heroesFetching = createAction("HEROES_FETCHING");
+export const heroesFetchingError = createAction("HEROES_FETCHING_ERROR");
+export const heroesFetched = createAction("HEROES_FETCHED");
+export const filtersFetching = createAction("FILTERS_FETCHING");
+export const filtersFetched = createAction("FILTERS_FETCHED");
+export const filtersFetchingError = createAction("FILTERS_FETCHING_ERROR");
+export const activeFilterChanged = createAction("ACTIVE_FILTER_CHANGED");
+export const heroCreated = createAction("HERO_CREATED");
+export const heroDeleted = createAction("HERO_DELETED");

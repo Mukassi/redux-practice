@@ -17,6 +17,12 @@
       "name": "Морской герой",
       "description": "Как аквамен, но не из DC",
       "element": "water"
+    },
+    {
+      "id": "26ebcd89-8894-4d63-b629-43fc0c92f758",
+      "name": "Илья",
+      "description": "Уничтожать до атомов",
+      "element": "fire"
     }
   ],
   "filters": [
