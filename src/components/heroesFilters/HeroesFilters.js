@@ -2,8 +2,8 @@ import { useHttp } from "../../hooks/http.hook";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
-
-import { filterHeroes, activeFilterChanged } from "../../actions";
+import { filterHeroes } from "../../actions";
+import { activeFilterChanged } from "./filtersSilce";
 import Spinner from "../spinner/Spinner";
 
 // Задача для этого компонента:
