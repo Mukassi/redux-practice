@@ -1,18 +1,6 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Первый герой",
-      "description": "Первый герой в рейтинге!",
-      "element": "fire"
-    },
-    {
-      "id": 2,
-      "name": "Неизвестный герой",
-      "description": "Скрывающийся в тени",
-      "element": "wind"
-    },
-    {
       "id": 3,
       "name": "Морской герой",
       "description": "Как аквамен, но не из DC",
@@ -23,30 +11,47 @@
       "name": "Илья",
       "description": "Уничтожать до атомов",
       "element": "fire"
+    },
+    {
+      "id": "e69fefb1-e658-4fc0-8ac5-fb3a028aa71d",
+      "name": "Ольга",
+      "description": "Сносить голову силой мысли",
+      "element": "wind"
+    },
+    {
+      "id": "0920b962-70e0-430b-8dc8-4a89360daffe",
+      "name": "Вася",
+      "description": "Изничножает своей глупостью",
+      "element": "earth"
     }
   ],
   "filters": [
     {
+      "id": "all",
       "name": "all",
       "label": "Все",
       "className": "btn-outline-dark"
     },
     {
+      "id": "fire",
       "name": "fire",
       "label": "Огонь",
       "className": "btn-danger"
     },
     {
+      "id": "water",
       "name": "water",
       "label": "Вода",
       "className": "btn-primary"
     },
     {
+      "id": "wind",
       "name": "wind",
       "label": "Ветер",
       "className": "btn-success"
     },
     {
+      "id": "earth",
       "name": "earth",
       "label": "Земля",
       "className": "btn-secondary"
